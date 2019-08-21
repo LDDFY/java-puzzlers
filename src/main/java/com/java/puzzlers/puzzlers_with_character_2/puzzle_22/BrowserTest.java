@@ -1,0 +1,9 @@
+package com.java.puzzlers.puzzlers_with_character_2.puzzle_22;
+
+public class BrowserTest {
+    public static void main(String[] args) {
+        System.out.print("iexplore:");
+        http://www.google.com;
+        System.out.println(":maximize"); 
+    }
+}
