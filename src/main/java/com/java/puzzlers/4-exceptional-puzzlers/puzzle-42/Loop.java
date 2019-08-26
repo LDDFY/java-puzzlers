@@ -1,7 +1,10 @@
+/**
+ * 循环中异常抛出导致循环中断
+ */
 public class Loop {
     public static void main(String[] args) {
-        int[][] tests = { { 6, 5, 4, 3, 2, 1 }, { 1, 2 },
-                          { 1, 2, 3 }, { 1, 2, 3, 4 }, { 1 } };
+        int[][] tests = {{6, 5, 4, 3, 2, 1}, {1, 2},
+                {1, 2, 3}, {1, 2, 3, 4}, {1}};
         int n = 0;
 
         try {
@@ -10,13 +13,15 @@ public class Loop {
                 if (thirdElementIsThree(tests[i++]))
                     n++;
             }
-        } catch(ArrayIndexOutOfBoundsException e) {
+        } catch (ArrayIndexOutOfBoundsException e) {
             // No more tests to process
+            e.printStackTrace();
         }
         System.out.println(n);
     }
 
     private static boolean thirdElementIsThree(int[] a) {
+        // & 按位与
         return a.length >= 3 & a[2] == 3;
     }
 }

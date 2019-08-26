@@ -1,3 +1,6 @@
+/**
+ * 实例变量初始化操作早于构造器
+ */
 public class Reluctant {
     private Reluctant internalInstance = new Reluctant();
 

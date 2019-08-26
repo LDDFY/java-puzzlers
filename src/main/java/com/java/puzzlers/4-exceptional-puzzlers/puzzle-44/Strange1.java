@@ -3,6 +3,7 @@ public class Strange1 {
         try {
             Missing m = new Missing();
         } catch (java.lang.NoClassDefFoundError ex) {
+            ex.printStackTrace();
             System.out.println("Got it!");
         }
     }

@@ -1,5 +1,8 @@
 import java.io.*;
 
+/**
+ * 由in.close()引起的异常导致流无法关闭。
+ */
 public class Copy {
     static void copy(String src, String dest) throws IOException {
         InputStream in = null;
@@ -12,9 +15,26 @@ public class Copy {
             while ((n = in.read(buf)) > 0)
                 out.write(buf, 0, n);
         } finally {
-            if (in != null) in.close();
-            if (out != null) out.close();
-        } 
+            if (in != null) {
+                in.close();
+                //修改为
+                try {
+                    in.close();
+                } catch (IOException e) {
+
+                }
+            }
+
+            if (out != null) {
+                out.close();
+                //修改为
+                try {
+                    out.close();
+                } catch (IOException e) {
+
+                }
+            }
+        }
     }
 
     public static void main(String[] args) throws IOException {
