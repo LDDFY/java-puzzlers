@@ -1,3 +1,6 @@
+/**
+ * long到float；long到double；int到float 将会丢失精度
+ */
 public class Count {
     public static void main(String[] args) {
         final int START = 2000000000;
@@ -5,5 +8,8 @@ public class Count {
         for (float f = START; f < START + 50; f++)
             count++;
         System.out.println(count);
+
+        System.out.println((float) START);
+        System.out.println((float) (START + 50));
     }
 }

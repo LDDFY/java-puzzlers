@@ -15,7 +15,6 @@ public class DosEquis {
         char x = 'X';
         int i = 0;
         System.out.println(true ? x : 0);
-
         System.out.println(true ? x : i);
         System.out.println(false ? i : x);
     }
