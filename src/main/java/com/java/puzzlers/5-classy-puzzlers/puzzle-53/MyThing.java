@@ -6,6 +6,12 @@ public class MyThing extends Thing {
      * effect but is legal.
      */
     public MyThing() {
-        super(arg = (int)System.currentTimeMillis());
+        //  super(arg=(int) System.currentTimeMillis());
+        this((int) System.currentTimeMillis());
+    }
+
+    private MyThing(int i) {
+        super(i);
+        arg = i;
     }
 }

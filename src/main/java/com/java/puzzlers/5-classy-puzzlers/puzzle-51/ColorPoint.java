@@ -1,6 +1,10 @@
+/**
+ * 构造方法执行顺序
+ */
 class Point {
     protected final int x, y;
     private final String name; // Cached at construction time
+
     Point(int x, int y) {
         this.x = x;
         this.y = y;
@@ -18,13 +22,14 @@ class Point {
 
 public class ColorPoint extends Point {
     private final String color;
+
     ColorPoint(int x, int y, String color) {
         super(x, y);
         this.color = color;
     }
 
     protected String makeName() {
-       return super.makeName() + ":" + color;
+        return super.makeName() + ":" + color;
     }
 
     public static void main(String[] args) {
