@@ -1,15 +1,18 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.List;
 
 public class OneLiners {
     public static void main(String[] args) {
         // Part A
-        String[] breakfast = { "spam", "sausage", "spam", "spam", "bacon",
-                               "spam", "tomato", "spam" };
+        String[] breakfast = {"spam", "sausage", "spam", "spam", "bacon",
+                "spam", "tomato", "spam"};
         System.out.println(withoutDuplicates(Arrays.asList(breakfast)));
 
         // Part B
         String weaponry = "fear, surprise,ruthless efficiency, an almost " +
-            "fanatical devotion to the Pope, nice red uniforms";
+                "fanatical devotion to the Pope, nice red uniforms";
         System.out.println(Arrays.asList(parse(weaponry)));
 
         // Part C
@@ -24,20 +27,24 @@ public class OneLiners {
     // Part A
     static <E> List<E> withoutDuplicates(List<E> original) {
         // Your code goes here
+        return new ArrayList<E>(new LinkedHashSet<E>(original));
     }
 
     // Part B
     static String[] parse(String string) {
         // Your code goes here
+        return string.split(",\\S*");
     }
 
     // Part C
     static String arrayToString(Object[] array) {
         // Your code goes here
+        return Arrays.deepToString(array);
     }
 
     // Part D
     static boolean hasMoreBitsSet(int i, int j) {
         // Your code goes here
+        return (Integer.bitCount(i) > Integer.bitCount(j));
     }
 }

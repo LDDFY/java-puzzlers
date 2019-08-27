@@ -1,7 +1,8 @@
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MoreNames {
-    private Map<String,String> m = new HashMap<String,String>();
+    private Map<String, String> m = new HashMap<String, String>();
 
     public void MoreNames() {
         m.put("Mickey", "Mouse");
@@ -15,5 +16,5 @@ public class MoreNames {
     public static void main(String args[]) {
         MoreNames moreNames = new MoreNames();
         System.out.println(moreNames.size());
-    } 
+    }
 }
