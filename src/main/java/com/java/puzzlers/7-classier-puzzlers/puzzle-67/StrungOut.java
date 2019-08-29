@@ -1,8 +1,12 @@
+/**
+ * 避免自己创建的类与JDK内置类重名
+ */
 public class StrungOut {
     public static void main(String[] args) {
         String s = new String("Hello world");
         System.out.println(s);
     }
+
 }
 
 class String {

@@ -2,8 +2,13 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Random;
 
+/**
+ * 两个int 或者long 相加减时有可能造成溢出
+ */
 public class SuspiciousSort {
     public static void main(String[] args) {
+        System.out.println(Integer.MAX_VALUE - Integer.MIN_VALUE);
+
         Random rnd = new Random();
         Integer[] arr = new Integer[100];
 
@@ -12,6 +17,10 @@ public class SuspiciousSort {
 
         Comparator<Integer> cmp = new Comparator<Integer>() {
             public int compare(Integer i1, Integer i2) {
+                //两个int 或者long 相加减时有可能造成溢出
+                //Integer.MAX_VALUE - Integer.MIN_VALUE
+                //不要使用基于减法的比较器
+                //可使用Collections.reverseOrder()、Comparator.reverseOrder() 代替
                 return i2 - i1;
             }
         };
