@@ -4,10 +4,12 @@ public class Outer {
     }
 
     private void greetWorld() throws Exception {
+        // 1. Constructor constructor = Inner.class.getConstructor(Outer.class);
+        //    System.out.println(constructor.newInstance(Outer.this));
         System.out.println(Inner.class.newInstance());
     }
 
-    public class Inner {
+    public /* 2. static*/ class Inner {
         public String toString() {
             return "Hello world";
         }

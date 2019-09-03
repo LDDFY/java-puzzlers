@@ -7,4 +7,6 @@ public class PoisonParen {
      * parentheses.  Recompile the program. If it no longer compiles, then
      * you've solved the puzzle!
      */
+
+    int i = -Integer.MIN_VALUE;
 }

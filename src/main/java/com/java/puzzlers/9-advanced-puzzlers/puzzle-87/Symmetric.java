@@ -5,10 +5,10 @@ public class Symmetric {
          * that causes this program to print "true false", then
          * you have proven that the == operator is not symmetric.
          */
-        <typeX> x = <valueX>;
-        <typeY> y = <valueY>;
+        long x = Long.MAX_VALUE;
+        double y = (double) Long.MAX_VALUE;
 
-        System.out.print ((x == y) + " ");
+        System.out.print((x == y) + " ");
         System.out.println(y == x);
     }
 } 

@@ -4,8 +4,8 @@ public class CoinSide {
     private static Random rnd = new Random();
 
     public static CoinSide flip() {
-        return rnd.nextBoolean() ? 
-            Heads.INSTANCE : Tails.INSTANCE;
+        return rnd.nextBoolean() ?
+                Heads.INSTANCE : Tails.INSTANCE;
     }
 
     public static void main(String[] args) {
@@ -14,7 +14,9 @@ public class CoinSide {
 }
 
 class Heads extends CoinSide {
-    private Heads() { }
+    private Heads() {
+    }
+
     public static final Heads INSTANCE = new Heads();
 
     public String toString() {
@@ -23,7 +25,9 @@ class Heads extends CoinSide {
 }
 
 class Tails extends CoinSide {
-    private Tails() { }
+    private Tails() {
+    }
+
     public static final Tails INSTANCE = new Tails();
 
     public String toString() {

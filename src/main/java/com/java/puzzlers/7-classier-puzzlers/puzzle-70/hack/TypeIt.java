@@ -1,6 +1,10 @@
 package hack;
+
 import click.CodeTalk;
 
+/**
+ * 包内私有方法无法被外部方法复写
+ */
 public class TypeIt {
     private static class ClickIt extends CodeTalk {
         void printMessage() {

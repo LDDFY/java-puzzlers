@@ -1,7 +1,6 @@
 public class SelfInterruption {
     public static void main(String[] args) {
         Thread.currentThread().interrupt();
-
         if (Thread.interrupted()) {
             System.out.println("Interrupted: " + Thread.interrupted());
         } else {

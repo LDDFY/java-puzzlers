@@ -5,8 +5,7 @@ public class Reflexive {
          * that causes this program to print "false", then
          * you have proven that the == operator is not reflexive.
          */
-        <typeX> x = <valueX>;
-
-        System.out.println(x == x);
+        System.out.println(Double.NaN == Double.NaN);
+        System.out.println(Float.NaN == Float.NaN);
     }
 }

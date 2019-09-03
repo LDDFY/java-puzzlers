@@ -1,5 +1,11 @@
+/**
+ * 泛型内部类访问到其外围类的类型参数，使程序模糊难懂。
+ *
+ * @param <E>
+ */
 public class LinkedList<E> {
     private Node<E> head = null;
+    //private Node head = null;
 
     private class Node<E> {
         E value;

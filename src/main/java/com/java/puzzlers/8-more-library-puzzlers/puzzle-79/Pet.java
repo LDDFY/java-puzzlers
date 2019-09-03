@@ -12,9 +12,11 @@ public class Pet {
     public void eat() {
         System.out.println(name + ": Mmmmm, " + food);
     }
+
     public void play() {
         System.out.println(name + ": " + sound + " " + sound);
     }
+
     public void sleep() {
         System.out.println(name + ": Zzzzzzz...");
     }

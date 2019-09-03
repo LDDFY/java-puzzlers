@@ -10,7 +10,7 @@ public class Lazy {
         t.start();
         try {
             t.join();
-        } catch(InterruptedException e) {
+        } catch (InterruptedException e) {
             throw new AssertionError(e);
         }
     }
